@@ -113,7 +113,7 @@ input, button, select, textarea, a {
 }
 .footer .container div strong {
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
 }
