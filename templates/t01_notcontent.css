@@ -1,0 +1,123 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  line-height: 1;
+  background-color: #F4F4F4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0;
+}
+input, button, select, textarea, a {
+  font: inherit;
+  color: inherit;
+}
+
+/* DESIGN INSPIRED/BASED OFF/STOLEN DE http://cssmenumaker.com/menu/simple-responsive-menu */
+.navigation {
+  background-color: #FF594C;
+  /*height: 40px;*/
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 10;
+}
+.navigation > ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 1000px;
+}
+.navigation > ul > li {
+  font-size: 15px;
+  height: 15px;
+  display: inline-block;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .3s;
+  position: relative;
+}
+.navigation > ul > li:hover {
+  color: #333;
+  font-weight: bold;
+}
+.navigation > ul > li:active {
+  color: white;
+}
+.navigation > ul > li::before {
+  content: '';
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  transition: all .3s;
+  z-index: -1;
+}
+.navigation > ul > li:hover::before {
+  height: 5px;
+}
+.navigation > ul > li:active::before {
+  height: 100%;
+}
+.navigation > ul > li:not(:last-of-type)::after {
+  content: '';
+  background-color: rgba(255,255,255,0.2);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  margin-top: -2.5px;
+  margin-right: -2.5px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: calc(100vh - 55px);
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.footer {
+  background-color: #212121;
+  width: 100%;
+  padding: 40px 0;
+  color: #ddd;
+}
+.footer .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+.footer .container .address {
+  flex: none;
+}
+.footer .container div {
+  flex: auto;
+  font-size: 16px;
+  padding: 0 20px;
+}
+.footer .container div span, .footer .container div a, .footer .container div strong {
+  display: block;
+  margin: 5px 0;
+}
+.footer .container div strong {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer .container div a {
+  text-decoration: none;
+  transition: all .2s;
+}
+.footer .container div a:hover {
+  color: #FF594C;
+}
