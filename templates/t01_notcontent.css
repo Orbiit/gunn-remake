@@ -77,6 +77,70 @@ input, button, select, textarea, a {
   margin-right: -2.5px;
   transform: rotate(45deg);
 }
+.navigation > ul > li > ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 5px 0;
+  background-color: #333;
+  transform-origin: 50% 0;
+  transform: perspective(500px) rotateX(-90deg);
+  pointer-events: none;
+  min-width: 100%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  transition: transform .3s;
+}
+.navigation > ul > li:hover > ul {
+  transform: perspective(500px) rotateX(0deg);
+  pointer-events: all;
+  transition: transform .3s cubic-bezier(0,1.5,1,1);
+}
+.navigation > ul > li > ul > li {
+  padding: 10px 20px;
+  color: white;
+  font-weight: normal;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.navigation > ul > li > ul > li:hover {
+  opacity: 1;
+}
+.navigation > .menu {
+  display: none;
+  color: white;
+  padding: 10px;
+  font-size: 35px;
+}
+@media (max-width: 600px) {
+  .navigation > .menu {
+    display: inline-block;
+  }
+  .navigation > ul {
+    display: none;
+    width: 100%;
+  }
+  .navigation > ul > li {
+    display: block;
+    height: auto;
+  }
+  .navigation > ul > li::before, .navigation > ul > li::after {
+    display: none;
+  }
+  .navigation > ul > li > ul {
+    position: static;
+    margin-top: 20px;
+    display: none;
+  }
+  .navigation > ul > li:hover > ul {
+    display: block;
+  }
+  .showNavLinks .navigation > ul {
+    display: block;
+  }
+}
 
 .content {
   max-width: 1000px;
@@ -91,13 +155,15 @@ input, button, select, textarea, a {
 .footer {
   background-color: #212121;
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0;
   color: #ddd;
 }
 .footer .container {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .footer .container .address {
   flex: none;
@@ -105,7 +171,7 @@ input, button, select, textarea, a {
 .footer .container div {
   flex: auto;
   font-size: 16px;
-  padding: 0 20px;
+  padding: 20px;
 }
 .footer .container div span, .footer .container div a, .footer .container div strong {
   display: block;
@@ -129,6 +195,7 @@ input, button, select, textarea, a {
     display: block;
   }
   .footer .container div {
-    width: 100%;
+    font-size: 24px;
+    text-align: center;
   }
 }
