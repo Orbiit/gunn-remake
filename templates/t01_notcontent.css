@@ -24,10 +24,17 @@ input, button, select, textarea, a {
   z-index: 10;
 }
 .navigation > ul {
+  position: relative;
   margin: 0 auto;
   padding: 0;
   list-style: none;
   max-width: 1000px;
+  transition: all .2s;
+}
+.showSearch .navigation > ul {
+  top: -55px;
+  opacity: 0;
+  pointer-events: none;
 }
 .navigation > ul > li {
   font-size: 15px;
@@ -124,18 +131,23 @@ input, button, select, textarea, a {
   cursor: pointer;
 }
 .navigation > .searchbar {
-  display: none;
   position: absolute;
-  top: 0;
+  top: 55px;
   left: 0;
   font-size: 25px;
   padding: 15px;
   right: 0;
   background: none;
   border: none;
+  height: 55px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .2s;
 }
 .showSearch .navigation > .searchbar {
-  display: block;
+  opacity: 1;
+  pointer-events: all;
+  top: 0;
 }
 @media (max-width: 600px) {
   .navigation > .menu {
