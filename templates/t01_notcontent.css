@@ -114,6 +114,29 @@ input, button, select, textarea, a {
   padding: 10px;
   font-size: 35px;
 }
+.navigation > .search {
+  color: white;
+  padding: 15px;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.navigation > .searchbar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25px;
+  padding: 15px;
+  right: 0;
+  background: none;
+  border: none;
+}
+.showSearch .navigation > .searchbar {
+  display: block;
+}
 @media (max-width: 600px) {
   .navigation > .menu {
     display: inline-block;
@@ -139,6 +162,10 @@ input, button, select, textarea, a {
   }
   .showNavLinks .navigation > ul {
     display: block;
+  }
+  .navigation > .search {
+    padding: 10px;
+    font-size: 35px;
   }
 }
 
