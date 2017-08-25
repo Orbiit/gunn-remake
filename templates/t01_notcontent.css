@@ -143,6 +143,7 @@ input, button, select, textarea, a {
   opacity: 0;
   pointer-events: none;
   transition: all .2s;
+  z-index: 10;
 }
 .showSearch .navigation > .searchbar {
   opacity: 1;
