@@ -30,6 +30,7 @@ input, button, select, textarea, a {
   list-style: none;
   max-width: 1000px;
   transition: all .2s;
+  top: 0;
 }
 .showSearch .navigation > ul {
   top: -55px;
