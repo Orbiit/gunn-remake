@@ -19,6 +19,9 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+:focus {
+  outline: none; /* need to make our own focus effects thus */
+}
 
 /* DESIGN INSPIRED/BASED OFF/STOLEN DE http://cssmenumaker.com/menu/simple-responsive-menu */
 .navigation {
@@ -256,9 +259,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .footer .container div a {
   text-decoration: none;
-  transition: all .2s;
+  transition: color .1s;
 }
-.footer .container div a:hover {
+.footer .container div a:hover, .footer .container div a:focus {
   color: #FF594C;
 }
 @media (max-width: 700px) {
