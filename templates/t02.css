@@ -8,10 +8,23 @@ body {
   font-weight: bold;
   line-height: 1.5;
   margin-top: 0;
-  margin-left: 25px;
-  margin-right: 25px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content-text h1 {
+  animation: border 1.5s;
+  -webkit-animation: border 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   padding-bottom: 10px;
+  border: none;
+  cubic-bezier: (0,.2,.58,1);
+}
+@-webkit-keyframes border {
+  0% {border-bottom: 1px solid rgba(0, 0, 0, 0); margin-left: 220px; margin-right: 220px;}
+  100% {border-bottom: 1px solid rgba(0, 0, 0, 0.2); margin-left: 25px; margin-right: 25px;}
+}
+@keyframes boxshadow {
+  0% {border-bottom: 1px solid rgba(0, 0, 0, 0); margin-left: 220px; margin-right: 220px;}
+  100% {border-bottom: 1px solid rgba(0, 0, 0, 0.2); margin-left: 25px; margin-right: 25px;}
 }
 .content-text p#something {
   font-family: 'Raleway', sans-serif;
@@ -26,19 +39,19 @@ body {
   margin: 0 auto;
   position: relative;
   background-color: white;
-  -webkit-animation: mymove 2s;
-  animation: mymove 2s;
+  -webkit-animation: boxshadow 2s;
+  animation: boxshadow 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   border-radius: 0.5em;
   margin-top: 50px;
 }
-@-webkit-keyframes mymove {
+@-webkit-keyframes boxshadow {
   25% {box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);}
   50% {box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.2);}
   100% {box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.3);}
 }
-@keyframes mymove {
+@keyframes boxshadow {
   25% {box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);}
   50% {box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.2);}
   100% {box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.3);}
