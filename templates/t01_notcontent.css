@@ -13,6 +13,12 @@ input, button, select, textarea, a {
   font: inherit;
   color: inherit;
 }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
 
 /* DESIGN INSPIRED/BASED OFF/STOLEN DE http://cssmenumaker.com/menu/simple-responsive-menu */
 .navigation {
@@ -23,21 +29,26 @@ input, button, select, textarea, a {
   position: relative;
   z-index: 10;
 }
-.navigation > ul {
+.navigation > .container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.navigation > .container > ul {
   position: relative;
   margin: 0 auto;
   padding: 0;
   list-style: none;
   max-width: 1000px;
-  transition: all .2s;
+  transition: all .3s;
   top: 0;
 }
-.showSearch .navigation > ul {
+.showSearch .navigation > .container > ul {
   top: -55px;
   opacity: 0;
   pointer-events: none;
 }
-.navigation > ul > li {
+.navigation > .container > ul > li {
   font-size: 15px;
   height: 15px;
   display: inline-block;
@@ -49,14 +60,14 @@ input, button, select, textarea, a {
   position: relative;
   font-family: 'Montserrat', sans-serif;
 }
-.navigation > ul > li:hover {
+.navigation > .container > ul > li:hover {
   color: #333;
   font-weight: bold;
 }
-.navigation > ul > li:active {
+.navigation > .container > ul > li:active {
   color: white;
 }
-.navigation > ul > li::before {
+.navigation > .container > ul > li::before {
   content: '';
   background-color: #333;
   position: absolute;
@@ -67,13 +78,13 @@ input, button, select, textarea, a {
   transition: all .3s;
   z-index: -1;
 }
-.navigation > ul > li:hover::before {
+.navigation > .container > ul > li:hover::before {
   height: 5px;
 }
-.navigation > ul > li:active::before {
+.navigation > .container > ul > li:active::before {
   height: 100%;
 }
-.navigation > ul > li:not(:last-of-type)::after {
+.navigation > .container > ul > li:not(:last-of-type)::after {
   content: '';
   background-color: rgba(255,255,255,0.2);
   position: absolute;
@@ -85,7 +96,7 @@ input, button, select, textarea, a {
   margin-right: -2.5px;
   transform: rotate(45deg);
 }
-.navigation > ul > li > ul {
+.navigation > .container > ul > li > ul {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -101,28 +112,28 @@ input, button, select, textarea, a {
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
   transition: transform .3s;
 }
-.navigation > ul > li:hover > ul {
+.navigation > .container > ul > li:hover > ul {
   transform: perspective(500px) rotateX(0deg);
   pointer-events: all;
   transition: transform .3s cubic-bezier(0,1.5,1,1);
 }
-.navigation > ul > li > ul > li {
+.navigation > .container > ul > li > ul > li {
   padding: 10px 20px;
   color: white;
   font-weight: normal;
   opacity: 0.7;
   white-space: nowrap;
 }
-.navigation > ul > li > ul > li:hover {
+.navigation > .container > ul > li > ul > li:hover {
   opacity: 1;
 }
-.navigation > .menu {
+.navigation > .container > .menu {
   display: none;
   color: white;
   padding: 10px;
   font-size: 35px;
 }
-.navigation > .search {
+.navigation > .container > .search {
   color: white;
   padding: 15px;
   font-size: 25px;
@@ -132,7 +143,7 @@ input, button, select, textarea, a {
   cursor: pointer;
   z-index: 10;
 }
-.navigation > .searchbar {
+.navigation > .container > .searchbar {
   position: absolute;
   top: 55px;
   left: 0;
@@ -144,43 +155,61 @@ input, button, select, textarea, a {
   height: 55px;
   opacity: 0;
   pointer-events: none;
-  transition: all .2s;
+  transition: all .3s;
   z-index: 10;
+  color: white;
+  width: calc(100% - 55px);
 }
-.showSearch .navigation > .searchbar {
+.navigation > .container > .searchbar::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.3);
+}
+.showSearch .navigation > .container > .searchbar {
   opacity: 1;
   pointer-events: all;
   top: 0;
 }
 @media (max-width: 600px) {
-  .navigation > .menu {
+  .navigation > .container > .menu {
     display: inline-block;
   }
-  .navigation > ul {
-    display: none;
+  .navigation > .container > ul {
+    max-height: 0;
     width: 100%;
+    overflow-y: hidden;
   }
-  .navigation > ul > li {
+  .navigation > .container > ul > li {
     display: block;
     height: auto;
   }
-  .navigation > ul > li::before, .navigation > ul > li::after {
+  .navigation > .container > ul > li::before, .navigation > .container > ul > li::after {
     display: none;
   }
-  .navigation > ul > li > ul {
+  .navigation > .container > ul > li > ul {
     position: static;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all .3s linear;
+    transform: none;
+    margin-top: 0;
+    padding: 0;
+  }
+  .navigation > .container > ul > li:hover > ul {
+    max-height: 100vh;
+    transition: all .3s linear;
+    transform: none;
     margin-top: 20px;
-    display: none;
+    padding: 5px 0;
   }
-  .navigation > ul > li:hover > ul {
-    display: block;
+  .showNavLinks .navigation > .container > ul {
+    max-height: 100vh;
   }
-  .showNavLinks .navigation > ul {
-    display: block;
-  }
-  .navigation > .search {
+  .navigation > .container > .search {
     padding: 10px;
     font-size: 35px;
+  }
+  .navigation > .container > .searchbar {
+    left: 55px;
+    width: calc(100% - 110px);
   }
 }
 
