@@ -17,7 +17,7 @@
   font-weight: bold;
   line-height: 1.5;
 }
-.content-text {
+.content-box {
   width: 50%;
   margin: 0 auto;
   position: relative;
@@ -26,7 +26,7 @@
   -webkit-animation: mymove 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  border-radius: 7.5px;
+  border-radius: 0.5em;
   padding: 3em 1em;
 }
 @-webkit-keyframes mymove {
