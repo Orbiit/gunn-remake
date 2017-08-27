@@ -40,11 +40,15 @@
 }
 .naturewrapper > .title {
   font-size: 70px;
+  height: 1em;
   position: absolute;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  margin: 0;
   text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 @media (max-aspect-ratio: 16/9) {
   .naturewrapper > .nature {
