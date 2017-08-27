@@ -47,7 +47,8 @@ body {
   margin: 1em auto;
 }
 .content-box {
-  width: 50%;
+  min-width: 100px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   animation-iteration-count: 1;
