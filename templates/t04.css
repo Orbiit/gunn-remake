@@ -1,0 +1,54 @@
+.navigation {
+  background-color: transparent;
+  position: absolute;
+  box-shadow: none;
+  background-image: linear-gradient(180deg,rgba(0,0,0,0.5),transparent);
+  transition: background-color .2s;
+}
+.navigation > .container > ul > li:hover, .navigation > .container > ul > li.hover {
+  color: white;
+  font-weight: normal;
+}
+.navigation > .container > ul > li:active {
+  color: #FF594C;
+}
+.navigation > .container > ul > li::before {
+  background-color: white;
+}
+.navigation > .container > ul > li > ul {
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .showNavLinks .navigation {
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+.naturewrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  position: relative;
+}
+.naturewrapper > .nature {
+  width: 100%;
+}
+.naturewrapper > .title {
+  font-size: 70px;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin: 0;
+  text-align: center;
+}
+@media (max-aspect-ratio: 16/9) {
+  .naturewrapper > .nature {
+    width: auto;
+    height: 100vh;
+  }
+}

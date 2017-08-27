@@ -63,7 +63,7 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   font-family: 'Montserrat', sans-serif;
 }
-.navigation > .container > ul > li:hover {
+.navigation > .container > ul > li:hover, .navigation > .container > ul > li.hover {
   color: #333;
   font-weight: bold;
 }
@@ -81,7 +81,7 @@ input[type="search"]::-webkit-search-results-decoration {
   transition: all .3s;
   z-index: -1;
 }
-.navigation > .container > ul > li:hover::before {
+.navigation > .container > ul > li:hover::before, .navigation > .container > ul > li.hover::before {
   height: 5px;
 }
 .navigation > .container > ul > li:active::before {
@@ -115,7 +115,7 @@ input[type="search"]::-webkit-search-results-decoration {
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
   transition: transform .3s;
 }
-.navigation > .container > ul > li:hover > ul {
+.navigation > .container > ul > li:hover > ul, .navigation > .container > ul > li.hover > ul {
   transform: perspective(500px) rotateX(0deg);
   pointer-events: all;
   transition: transform .3s cubic-bezier(0,1.5,1,1);
@@ -127,7 +127,7 @@ input[type="search"]::-webkit-search-results-decoration {
   opacity: 0.7;
   white-space: nowrap;
 }
-.navigation > .container > ul > li > ul > li:hover {
+.navigation > .container > ul > li > ul > li:hover, .navigation > .container > ul > li > ul > li.hover {
   opacity: 1;
 }
 .navigation > .container > .menu {
@@ -196,7 +196,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 0;
     padding: 0;
   }
-  .navigation > .container > ul > li:hover > ul {
+  .navigation > .container > ul > li:hover > ul, .navigation > .container > ul > li.hover > ul {
     max-height: 100vh;
     transition: all .3s linear;
     transform: none;
