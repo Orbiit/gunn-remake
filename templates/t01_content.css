@@ -52,3 +52,98 @@
   border-radius: 5px;
   max-width: 100%;
 }
+.content ul, .content ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+  list-style: none;
+}
+.content ol > li {
+  counter-increment: ol;
+}
+.content ol > li:first-child {
+  counter-reset: ol;
+}
+.content li {
+  margin: 0.5em 0;
+  position: relative;
+}
+.content li::before {
+  opacity: 0.5;
+  position: absolute;
+  right: 100%;
+  margin-right: 0.3em;
+}
+.content ul > li::before {
+  content: '-';
+}
+.content ol > li:before {
+  content: counter(ol);
+  font-family: 'Montserrat', sans-serif;
+}
+.content hr {
+  width: 50%;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin: 0.5em auto;
+}
+.content textarea {
+  display: block;
+  padding: 10px;
+  max-width: 100%;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0.3125em;
+  margin: 0.5em 0;
+  transition: all .2s;
+}
+.content button {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  padding: 0.625em;
+  margin: 0.5em 0;
+  transition: all .1s;
+}
+.content button:hover, content button:focus {
+  color: #FF594C;
+  border-color: #FF594C;
+}
+.content button:active {
+  background-color: #FF594C;
+  color: white;
+}
+.content input, .content select {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 0.3125em;
+  margin: 0 0.3125em;
+  transition: all .2s;
+  max-width: 100%;
+}
+.content select {
+  cursor: pointer;
+}
+.content input:focus, .content select:focus, .content textarea:focus {
+  border-color: #FF594C;
+}
+.content label {
+  font-family: 'Montserrat', sans-serif;
+  /*text-transform: uppercase;*/
+}
+.content table {
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 5px;
+  max-width: 100%;
+}
+.content tr:nth-child(2n+1) {
+  background-color: rgba(0,0,0,0.05);
+}
+.content td, .content th {
+  padding: 0.625em;
+}
+.content th {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
