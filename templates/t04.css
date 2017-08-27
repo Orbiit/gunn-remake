@@ -93,3 +93,8 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+@media (max-width: 1000px) {
+  .content {
+    border-radius: 0;
+  }
+}
