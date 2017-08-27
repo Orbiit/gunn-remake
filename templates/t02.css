@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
   margin-top: 0;
 }
-.content-text h1 {
+.content h1 {
   animation: border 1.5s;
   -webkit-animation: border 1.5s;
   animation-iteration-count: 1;
