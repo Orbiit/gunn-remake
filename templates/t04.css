@@ -15,9 +15,15 @@
 .navigation > .container > ul > li::before {
   background-color: white;
 }
+.navigation > .container > ul > li:not(:last-of-type)::after {
+  background-color: rgba(255,255,255,0.5);
+}
 .navigation > .container > ul > li > ul {
   background-color: rgba(0,0,0,0.5);
   box-shadow: none;
+}
+.navigation > .container > .searchbar::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.5);
 }
 @media (max-width: 600px) {
   .showNavLinks .navigation {
