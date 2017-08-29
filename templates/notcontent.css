@@ -258,12 +258,20 @@ input[type="search"]::-webkit-search-results-decoration {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
 }
-.footer .container div a {
+.footer a {
   text-decoration: none;
   transition: color .1s;
 }
-.footer .container div a:hover, .footer .container div a:focus {
+.footer a:hover, .footer a:focus {
   color: #FF594C;
+}
+.footer .disclaimer {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 8px;
+  text-align: center;
+  display: block;
+  color: rgba(255,255,255,0.7);
 }
 @media (max-width: 700px) {
   .footer .container {
