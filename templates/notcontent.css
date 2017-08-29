@@ -12,6 +12,7 @@ body {
 input, button, select, textarea, a {
   font: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,

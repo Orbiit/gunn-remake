@@ -121,9 +121,15 @@
   transition: all .2s;
   max-width: 100%;
   background-color: white;
+  height: 1em;
+  box-sizing: content-box;
 }
 .content select {
   cursor: pointer;
+  padding-right: 1.3125em;
+  background-image: url('../icons/material_arrow_drop_down.svg');
+  background-position: right;
+  background-repeat: no-repeat;
 }
 .content input:focus, .content select:focus, .content textarea:focus {
   border-color: #FF594C;
