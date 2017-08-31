@@ -109,7 +109,6 @@ body {
   margin: 0 auto;
 }
 .titlewrapper > .abovecontent > .imageselect {
-  margin: 0;
   padding: 0;
   list-style: none;
   margin: 0 auto;
@@ -130,6 +129,13 @@ body {
 .titlewrapper > .abovecontent > .imageselect > li.active {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.titlewrapper > .abovecontent > .scrolldown {
+  font-size: 40px;
+  margin: 0 auto;
+  display: table;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .content {
