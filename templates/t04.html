@@ -13,7 +13,8 @@
   <body>
     <div class="naturewrapper">
       <!-- <img src="https://source.unsplash.com/featured/1600x900/?nature" alt="nature." class="natureback"> -->
-      <img src="https://images.unsplash.com/reserve/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.JPG?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=4ab7d1b6931e19fa21a31b71ed3fbbcb" alt="nature." class="natureback">
+      <img alt="nature." class="natureback">
+      <canvas class="naturetransition" width="1600" height="900"></canvas>
       <!--
         https://images.unsplash.com/reserve/yapfjxRqy2d2rGRNc2yQ_zavrsnica-9-indie.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=e69698de60f5688845748eb6579cf59a
         https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=ad26590bd0d6a0165892fb6485976020
@@ -25,6 +26,7 @@
       <div class="container">
         <i class="material-icons menu">menu</i>
         <i class="material-icons search">search</i>
+        <i class="material-icons login">lock_open</i>
         <input type="search" placeholder="Search" class="searchbar">
         <ul>
           <li>About<ul>
@@ -44,7 +46,7 @@
     <div class="titlewrapper">
       <h1 class="title">Gunn High School</h1>
       <div class="abovecontent">
-        <a href="#">log in</a>
+        <ul class="imageselect"></ul>
       </div>
     </div>
     <div class="content">
@@ -81,5 +83,6 @@
       <span class="disclaimer">This is not the official <a href="http://gunn.pausd.org/">Gunn website</a>; it's a redesign of it which is <a href="https://github.com/Orbiit/gunn-remake">open source here</a>.</span>
     </div>
     <script src="touchy.js" charset="utf-8"></script>
+    <script src="t04.js" charset="utf-8"></script>
   </body>
 </html>

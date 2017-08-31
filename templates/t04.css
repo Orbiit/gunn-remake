@@ -1,3 +1,7 @@
+body {
+  background-color: #333;
+}
+
 .navigation {
   background-color: transparent;
   position: absolute;
@@ -43,11 +47,29 @@
   left: 0;
   z-index: -1;
 }
-.naturewrapper .natureback {
+.naturewrapper .natureback, .naturewrapper .naturetransition {
   width: 100%;
+  position: absolute;
+}
+.natureloading .natureback {
+  display: none;
+}
+.naturewrapper .naturetransition {
+  display: none;
+}
+.natureloading .naturetransition {
+  display: block;
+}
+.natureanimation .naturewrapper .naturetransition {
+  display: block;
+  animation: fadeout 0.5s forwards;
+}
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
 @media (max-aspect-ratio: 16/9) {
-  .naturewrapper .natureback {
+  .naturewrapper .natureback, .naturewrapper .naturetransition {
     width: auto;
     height: 100vh;
   }
@@ -86,17 +108,28 @@
   right: 0;
   margin: 0 auto;
 }
-.titlewrapper > .abovecontent > a {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 20px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  margin: 10px;
+.titlewrapper > .abovecontent > .imageselect {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  display: table;
+}
+.titlewrapper > .abovecontent > .imageselect > li {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  border: 3px solid white;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 10px rgba(0,0,0,0.5);
+  transition: all .2s;
+}
+.titlewrapper > .abovecontent > .imageselect > li.active {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .content {

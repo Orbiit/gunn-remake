@@ -137,15 +137,19 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 10px;
   font-size: 35px;
 }
-.navigation > .container > .search {
+.navigation > .container > .search, .navigation > .container > .login {
   color: white;
   padding: 15px;
   font-size: 25px;
+  height: 25px;
   position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
   z-index: 10;
+}
+.navigation > .container > .search {
+  right: 55px;
 }
 .navigation > .container > .searchbar {
   position: absolute;
@@ -162,7 +166,7 @@ input[type="search"]::-webkit-search-results-decoration {
   transition: all .3s;
   z-index: 10;
   color: white;
-  width: calc(100% - 55px);
+  width: calc(100% - 110px);
 }
 .navigation > .container > .searchbar::-webkit-input-placeholder {
   color: rgba(255,255,255,0.3);
@@ -213,7 +217,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .navigation > .container > .searchbar {
     left: 55px;
-    width: calc(100% - 110px);
+    width: calc(100% - 165px);
   }
 }
 
