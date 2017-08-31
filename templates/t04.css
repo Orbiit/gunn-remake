@@ -139,6 +139,20 @@ body {
   cursor: pointer;
   animation: indicatedown 1s infinte;
 }
+@keyframes indicatedown {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+}
 
 .content {
   border-top-left-radius: 5px;
