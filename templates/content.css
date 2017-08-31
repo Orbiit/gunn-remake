@@ -103,6 +103,8 @@
   cursor: pointer;
   padding: 0.625em;
   margin: 0.5em 0;
+  text-transform: uppercase;
+  font-family: 'Montserrat',sans-serif;
   transition: all .1s;
 }
 .content button:hover, content button:focus {
