@@ -3,6 +3,7 @@ window.addEventListener("load",e=>{
   c=canvas.getContext('2d'),
   backimg=document.querySelector('.natureback'),
   imagesel=document.querySelector('.imageselect'),
+  tocontent=document.querySelector('.scrolldown'),
   images=[
     "https://images.unsplash.com/reserve/yapfjxRqy2d2rGRNc2yQ_zavrsnica-9-indie.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=e69698de60f5688845748eb6579cf59a",
     "https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=ad26590bd0d6a0165892fb6485976020",
@@ -12,6 +13,7 @@ window.addEventListener("load",e=>{
   DEFAULT_IMAGE=3,
   animating=false,
   currentimage=DEFAULT_IMAGE,
+  animatingscroll=false,
   autochangeinterval;
   backimg.addEventListener("load",e=>{
     document.body.classList.remove('natureloading');
@@ -44,7 +46,7 @@ window.addEventListener("load",e=>{
       backimg.src=images[currentimage];
       document.body.classList.add('natureloading');
       clearInterval(autochangeinterval);
-      autochangeinterval=setInterval(autoChange,10000);
+      // autochangeinterval=setInterval(autoChange,10000);
     }
   },false);
   function autoChange() {
@@ -55,4 +57,18 @@ window.addEventListener("load",e=>{
     }
   }
   // autochangeinterval=setInterval(autoChange,10000);
+  tocontent.addEventListener("click",e=>{
+    function scroll() {
+      window.scrollBy(0,Math.ceil((window.innerHeight-(window.pageYOffset||document.documentElement.scrollTop))/5));
+      if (animatingscroll) {
+        if (Math.abs(window.innerHeight-(window.pageYOffset||document.documentElement.scrollTop))>1) window.requestAnimationFrame(scroll);
+        else window.scrollTo(0,window.innerHeight);
+      }
+    }
+    animatingscroll=true;
+    window.requestAnimationFrame(scroll);
+  },false);
+  window.addEventListener("wheel",e=>{
+    if (animatingscroll) animatingscroll=false;
+  },false);
 },false);

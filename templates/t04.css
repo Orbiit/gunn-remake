@@ -167,9 +167,38 @@ body {
 .content {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  min-height: auto;
+}
+.content .crisis {
+  display: table;
+  margin: 0 auto;
+}
+.content .carousel {
+  background-color: rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
 }
 @media (max-width: 1000px) {
   .content {
     border-radius: 0;
+  }
+}
+
+.news {
+  border-radius: 0;
+  background-color: rgba(0,0,0,0.7);
+  box-shadow: none;
+  min-height: 300px;
+  color: white;
+  display: flex;
+}
+.news > div {
+  flex: 1 1 0;
+  padding: 20px;
+}
+@media (max-width: 700px) {
+  .news {
+    display: block;
   }
 }
