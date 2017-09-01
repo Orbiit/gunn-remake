@@ -46,6 +46,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  margin: 0 auto;
 }
 .naturewrapper .natureback, .naturewrapper .naturetransition {
   width: 100%;
