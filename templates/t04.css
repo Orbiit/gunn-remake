@@ -11,7 +11,6 @@ body {
 }
 .navigation > .container > ul > li:hover, .navigation > .container > ul > li.hover {
   color: white;
-  font-weight: normal;
 }
 .navigation > .container > ul > li:active {
   color: #FF594C;
@@ -47,9 +46,16 @@ body {
   left: 0;
   z-index: -1;
 }
+.naturewrapper .naturehatesafari {
+  width: 100vw;
+  height: 56.25vw;
+  position: relative;
+}
 .naturewrapper .natureback, .naturewrapper .naturetransition {
   width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .natureloading .natureback {
   display: none;
@@ -69,9 +75,13 @@ body {
   to {opacity: 0;}
 }
 @media (max-aspect-ratio: 16/9) {
+  .naturewrapper .naturehatesafari {
+    min-width: calc(100vh / 0.5625);
+    height: 100vh;
+  }
   .naturewrapper .natureback, .naturewrapper .naturetransition {
     width: auto;
-    height: 100vh;
+    height: 100%;
   }
 }
 
