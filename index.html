@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Gunn High School</title>
-    <meta name="description" content="TBD">
-    <link rel="stylesheet" type="text/css" href="do-not-delete.css">
+    <title>Template Design 4 - Gunn High School</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/notcontent.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <style>
-      body {
-        max-width: 1000px;
-        margin: 20px auto;
-        padding: 0 20px;
-        font-family: sans-serif;
-      }
-    </style>
   </head>
   <body>
-    <h1>Gunn Redesign</h1>
-    <p>Although we aren't finished, you can see what will soon be the index page of this Gunn remake over at <a href="templates/t04.html">t04.html</a>.</p>
-    <p>The special words that make these things appear is available <a href="https://github.com/Orbiit/gunn-remake/">here</a>.</p>
+    <div class="naturewrapper">
+      <div class="naturehatesafari">
+        <img alt="nature." class="natureback">
+        <canvas class="naturetransition" width="1600" height="900"></canvas>
+      </div>
+    </div>
+    <div class="navigation">
+      <div class="container">
+        <i class="material-icons menu">menu</i>
+        <i class="material-icons search">search</i>
+        <i class="material-icons login"><a href="#">lock_open</a></i>
+        <input type="search" placeholder="Search" class="searchbar">
+        <ul></ul>
+      </div>
+    </div>
+    <div class="titlewrapper">
+      <h1 class="title">Gunn High School</h1>
+      <div class="abovecontent">
+        <i class="material-icons scrolldown">keyboard_arrow_down</i>
+        <ul class="imageselect"></ul>
+      </div>
+    </div>
+    <div class="content">
+      <!-- no one's going to stop be from putting a <button> in an <a> tag -->
+      <a href="#"><button type="button" class="crisis">Crisis Resources</button></a>
+      <div class="carousel">
+        <img src="http://via.placeholder.com/500x500">
+      </div>
+    </div>
+    <div class="news content dark">
+      <div class="announcements">
+        <h1>News</h1>
+        <h2>Gunn Back to School Night</h2>
+        <p>The Gunn Back to School Night will take place on <strong>Thursday, 31 August 2017 from 6:00 - 9:00 pm</strong>. This evening gives you a brief overview of your child’s instructional program and lets you meet his/her instructors.</p>
+        <h2>Titan Talk - 2017 August 27</h2>
+        <p>Download it <a href="#">here</a>.</p>
+        <h2>Titan Talk - 2017 August 21</h2>
+        <p>Download it <a href="#">here</a>.</p>
+      </div>
+      <div class="calendar">
+        <h1>Events</h1>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class='social'>
+        <li><a href="#"><img src="icons/facebook.svg" alt="face book"></a></li>
+        <li><a href="#"><img src="icons/twitter.svg" alt="Trump bird talk"></a></li>
+        <li><a href="#"><img src="icons/instagram.svg" alt="fast pictures"></a></li>
+        <li><a href="#"><img src="icons/snapchat.svg" alt="picture talk"></a></li>
+        <li><a href="#"><img src="icons/youtube.svg" alt="TV about you"></a></li>
+      </ul>
+      <div class="container">
+        <div class="address">
+          <strong>Henry M. Gunn High School</strong>
+          <a href="https://www.google.com/maps/place/Henry+M+Gunn+High+School/"><span>780 Arastradero Rd</span>
+          <span>Palo Alto, California 94306</span></a>
+          <span>Phone: (650) 354-8200</span>
+          <span>Fax: (650) 493-7801</span>
+          <span>Attendance: (650) 354-8210</span>
+        </div>
+      </div>
+      <span class="disclaimer">This is not the official <a href="http://gunn.pausd.org/">Gunn website</a>; it's a redesign of it which is <a href="https://github.com/Orbiit/gunn-remake">open source here</a>.</span>
+    </div>
+    <script src="js/touchy.js" charset="utf-8"></script>
+    <script src="js/home.js" charset="utf-8"></script>
+    <script src="js/links.js" charset="utf-8"></script>
   </body>
 </html>

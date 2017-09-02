@@ -33,6 +33,9 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   z-index: 10;
 }
+.navigation a {
+  text-decoration: none;
+}
 .navigation > .container {
   position: relative;
   margin: 0 auto;
@@ -175,7 +178,7 @@ input[type="search"]::-webkit-search-results-decoration {
   pointer-events: all;
   top: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 790px) {
   .navigation > .container > .menu {
     display: inline-block;
   }
@@ -210,7 +213,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .showNavLinks .navigation > .container > ul {
     max-height: 100vh;
   }
-  .navigation > .container > .search {
+  .navigation > .container > .search, .navigation > .container > .login {
     padding: 10px;
     font-size: 35px;
   }
@@ -275,6 +278,15 @@ input[type="search"]::-webkit-search-results-decoration {
   text-align: center;
   display: block;
   color: rgba(255,255,255,0.7);
+}
+.footer .social {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.footer .social li {
+  display: inline-block;
 }
 @media (max-width: 700px) {
   .footer .container {
